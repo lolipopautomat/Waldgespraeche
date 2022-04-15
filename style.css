@@ -38,9 +38,13 @@ body {
     align-items: center;
     background-color: #A7CECB;
     color: white;
+    min-height: 3rem;
 }
 .home{
-    background-color: aqua !important;
+    background-image: url("schwarzenegger-wuchs-in.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
 .logo{
@@ -73,6 +77,8 @@ body {
 }
 .Navbar-links li{
     list-style: none;
+    font-size: 1.2rem;
+    transition: all .3s ease-in-out;
 }
 .Navbar-links a{
     font-family: 'Tenor Sans', sans-serif;
@@ -82,7 +88,8 @@ body {
     display: block;
 }
 .Navbar-links li:hover{
-    background-color: #555;
+    font-size: 1.1rem;
+    transition: all .3s ease-in-out;
 }
 .toggle {
     position: fixed;
@@ -92,7 +99,7 @@ body {
     align-items: center;
     width: 40px;
     cursor: pointer;
-    height: 40px;
+    height: 3rem;
     transition: all .5s ease-in-out;
 }
 .Burger {
@@ -397,16 +404,12 @@ body {
     .Navbar-links li {
         display: flex;
         text-align: center;
-        border-bottom: 1px solid;
-        border-color: #555;
         height: 150px;
         align-items:center ;
         justify-content: center;
     }
     .first {
         margin-top: 25%;
-        border-top: 1px solid;
-        border-color: #555;
     }
     .Navbar-links li a {
         font-size: 2rem;
