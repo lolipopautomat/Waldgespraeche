@@ -37,7 +37,10 @@ sectionOneObserver.observe(sectionOne);
 
 let menuOpen = false;
 
-toggleButton.addEventListener("click", () => {
-  toggleButton.classList.toggle("open");
-  navbarLinks.classList.toggle("active");
-});
+function toggleNavbar(){
+    if (window.innerWidth<600){
+      toggleButton.classList.toggle("open");
+      navbarLinks.classList.toggle("active");
+    }
+}
+toggleButton.addEventListener("click", () => toggleNavbar());

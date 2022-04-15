@@ -16,9 +16,9 @@
     <div class="logo"></div>
     <div class="Navbar-links">
       <ul>
-        <li class="first"><a href="#">&Uumlber mich</a></li>
-        <li><a href="#">Coaching</a></li>
-        <li><a href="#">Kontakt</a></li>
+        <li onclick="toggleNavbar()" class="first"><a href="#uebermich">&Uumlber mich</a></li>
+        <li onclick="toggleNavbar()"><a href="#Coaching">Coaching</a></li>
+        <li onclick="toggleNavbar()"><a href="#Preise">Preise</a></li>
       </ul>
     </div>
   </nav>
@@ -33,7 +33,7 @@
     <section class="home fwh-slide "></section>
 
     <!--u2eber mich-->
-    <section class="fwh-slide-body">
+    <section class="fwh-slide-body" id="uebermich">
       <div class="block--about">
         <div class="about--picture">
           <img width="100%" src="./bilder/Ivana-bild.png" alt="Ivana Kilian"/>
@@ -72,7 +72,7 @@
       </div>
     </section>
     <!--coaching-->
-    <section class="fwh-slide-body fwh-slide--bg-grey">
+    <section class="fwh-slide-body fwh-slide--bg-grey" id="Coaching">
       <div class="block--coaching">
         <div class="coaching--text">
           <p class="heading1">&Uuml;ber das Coaching</p>
@@ -89,7 +89,7 @@
           <img src="./bilder/landschaft-weg.png" alt="team" width="70%" />
         </div>
         <div class="text2">
-          <div class="heading1 subline">
+          <div class="subline">
             <p>Was beschäftigt dich?</p>
           </div>
           <p>
@@ -110,7 +110,7 @@
       </div>
     </section>
     <!--preise-->
-    <section class="fwh-slide-body">
+    <section class="fwh-slide-body" id="Preise">
       <div class="block--preise">
         <div class="coaching--preise">
           <p class="heading2">Preise</p>
