@@ -14,8 +14,6 @@ body {
 }
 
 .page_container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
     height: 100vh;
 }
 
@@ -139,14 +137,11 @@ body {
     height: 100vh;
     background: white;
     box-sizing: border-box;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
 }
 .fwh-slide-body{
     height: 100vh;
     background: white;
     box-sizing: border-box;
-    scroll-snap-align: start;
 }
 .fwh-slide--bg-grey{
     background: #425552;
@@ -369,12 +364,8 @@ body {
         grid-template-rows: repeat(4, 1fr);
         }
     
-    .fwh-slide {
-        scroll-snap-align: none;
-    }
     .fwh-slide-body{
         height: auto;
-        scroll-snap-align: none;
     }
 }
 
@@ -382,8 +373,6 @@ body {
 
 @media only screen and (max-width: 600px) {
     .page_container {
-        scroll-snap-type: none;
-        overflow-y: scroll;
         height: 100vh;
     }
     
@@ -437,12 +426,9 @@ body {
         opacity: 0;
         transition: all 0.3s ease-in-out;
     }
-    .fwh-slide {
-        scroll-snap-align: none;
-    }
+
     .fwh-slide-body{
         height: auto;
-        scroll-snap-align: none;
     }
     .block--about{
         display: flex;
