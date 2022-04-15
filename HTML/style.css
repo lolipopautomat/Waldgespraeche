@@ -209,7 +209,7 @@ body {
     grid-column-gap: max(3%, 1.5rem);
     grid-row-gap: max(3%, 1.5rem);
     padding: clamp(1rem, 1vw, 4rem);
-    padding-top: 4rem;
+    padding: 2.5rem;
     align-items: center;
     }
 
@@ -239,7 +239,7 @@ body {
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    padding: 4rem;
+    padding: 2.5rem;
     }
 
 .coaching--text { grid-area: 1 / 1 / 5 / 5; }
@@ -411,7 +411,7 @@ body {
     .text_bg {
         background-color: rgb(77, 116, 114);
     }
-    .test {
+    .container_preise {
         flex-wrap: wrap;
     }
     .preisebg{
@@ -421,6 +421,7 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 20px;
+        padding: 0.5rem;
     }
     .preisebgo{
         background-color: aquamarine;
@@ -429,6 +430,7 @@ body {
         align-items: center;
         justify-content: center;
         border-radius: 30px;
+        padding: 0.5rem;
     }
     .preise{
         width: 100%;
