@@ -41,7 +41,7 @@ body {
     min-height: 3rem;
 }
 .home{
-    background-image: url("schwarzenegger-wuchs-in.jpg");
+    background-image: url("/bilder/cover_mobile2.png");
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -428,6 +428,9 @@ body {
     .logo_home.start{
         opacity: 0;
         transition: all 0.3s ease-in-out;
+    }
+    .home{
+        background-image: url("/bilder/cover_mobile2.png");
     }
 
     .fwh-slide-body{
