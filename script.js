@@ -8,7 +8,7 @@ const nav = document.querySelector("nav");
 const sectionOne = document.getElementsByClassName("home")[0];
 
 const sectionOneOptions = {
-    rootMargin:"-60px 0px 0px 0px"
+    rootMargin:"-50px 0px 0px 0px"
 };
 
 const sectionOneObserver = new IntersectionObserver(function (
