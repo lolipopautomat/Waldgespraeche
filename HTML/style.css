@@ -22,31 +22,9 @@ body {
     align-items: center;
     width: 100%;
     justify-content: center;
-    align-items: center;
     background-color: #A7CECB;
     color: white;
 }
-/*.Brandname{
-    position: absolute;
-    left: 0;
-    padding-left: 30px;
-    font-size: 1.5rem;
-    transition: all .5s ease-in-out;
-    margin: .5rem;
-    opacity: 1;
-}
-.Brandname.start{
-    position: absolute;
-    transition: all .5s ease-in-out;
-    opacity: 0;
-}
-img{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-}*/
 .home{
     background-color: aqua;
     display: flex;
@@ -146,6 +124,8 @@ img{
     transform: rotate(-45deg) translate(35px,35px);
 }
 
+/*--------------Header End-------------------*/
+
 .fwh-slide{
     height: 100vh;
     background: white;
@@ -153,7 +133,7 @@ img{
     overflow: hidden;
 }
 .fwh-slide--bg-grey{
-  /*background: #EEF2F2; */
+    background: #758888; 
     overflow: hidden;
 }
 .fwh-slide p {
@@ -164,9 +144,21 @@ img{
     font-family: 'Tenor Sans', sans-serif;
     font-size: 0.9rem;
     color: #93B6B3;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
 }
 .heading2{
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 5rem;
+    line-height: 0.96;
+    color: #A7CECB;
+}
+.heading3{
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 5rem;
+    line-height: 0.96;
+    color: #A7CECB;
+}
+.heading4{
     font-family: 'Tenor Sans', sans-serif;
     font-size: 5rem;
     line-height: 0.96;
@@ -177,9 +169,9 @@ img{
     font-size: 1.25rem;
     color: #93B6B3;
     padding-top: 2rem;
-    padding-left: 0.5rem;
-    
+    padding-left: 0.5rem;    
 }
+
 .subline{
     font-family: 'Tenor Sans', sans-serif;
     font-size: 0.8rem;
@@ -191,7 +183,7 @@ img{
 
 .text2{
     font-family: 'Tenor Sans', sans-serif;
-    font-size: 1.20rem;
+    font-size: 1.25rem;
     color: #93B6B3;
     padding-top: 0rem;
     padding-left: 0.5rem;
@@ -205,10 +197,10 @@ img{
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     padding: 4rem;
-    }
+}
 
-    .about--picture { grid-area: 1 / 2 / 6 / 5; }
-    .about--text { grid-area: 1 / 5 / 6 / 8; }
+.about--picture { grid-area: 1 / 2 / 6 / 5; }
+.about--text { grid-area: 1 / 5 / 6 / 8; }
    
 .block--coaching {
     display: grid;
@@ -233,10 +225,10 @@ img{
 
 
 .test{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
-
 .block--preise{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
@@ -262,8 +254,10 @@ img{
     grid-row-gap: 20px;
     padding: 4rem;
 }
-
-@media (max-width: 600px) {
+.text_bg {
+    background-color: #fff;
+}
+@media only screen and (max-width: 600px) {
     .toggle {
         display: flex;
     }
@@ -303,4 +297,121 @@ img{
         opacity: 0;
         transition: all 0.3s ease-in-out;
     }
+    .fwh-slide{
+        height: auto;
+    }
+    .block--about{
+        /*grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 40vh);
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+        padding: 4rem;*/
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .text {
+        padding-left: 0;
+    }
+    .text2 {
+        padding-left: 0;
+    }
+    .about--text { 
+        /*grid-column-start:1; 
+        grid-column-end:3; 
+        grid-row-start:1; 
+        grid-row-end:3; */ 
+        display: flex;
+        order: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .about--picture {
+        /*grid-column-start:1; 
+        grid-column-end:3; 
+        grid-row-start:4; 
+        grid-row-end:5; 
+        align-items: end; */
+        order: 2;
+        display: flex;
+    }
+    .block--coaching {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .coaching--text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .heading3{
+        font-size: 15vw;
+    }
+    .coaching--bild1 { 
+        display: flex; 
+        }
+    .coaching--bild2 { 
+        display: none;
+        }
+    
+    .coaching--bild3 { 
+        display: flex; 
+    }
+    .block--preise{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .block--kontakt {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .heading4{
+        font-size: 6vw;
+    }
+    .text_bg {
+        background-color: rgb(77, 116, 114);
+    }
+    .test {
+        flex-wrap: wrap;
+    }
+    .preisebg{
+        background-color: aquamarine;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+    }
+    .preisebgo{
+        background-color: aquamarine;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+    }
+    .preise{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .textpreise{
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 1.25rem;
+        color: #93B6B3;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 0.5rem;    
+    }
+    .textpreiseu{
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 1.25rem;
+        color: #93B6B3;
+        padding-top: 0.3rem;
+        padding-bottom: 1rem;
+        padding-left: 0.5rem;    
+    }
+    
 }
