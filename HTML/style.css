@@ -139,6 +139,7 @@ body {
     background: white;
     box-sizing: border-box;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 .fwh-slide-body{
     height: 100vh;
@@ -185,7 +186,7 @@ body {
 }
 .subline{
     font-family: 'Tenor Sans', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #93B6B3;
     padding-left: 0.5rem;
     padding-top: 3rem;
@@ -193,6 +194,7 @@ body {
 }
 
 .text2{
+    grid-area: 2 / 1 / 2 / 8;
     font-family: 'Tenor Sans', sans-serif;
     font-size: 1.25rem;
     color: #93B6B3;
@@ -234,24 +236,38 @@ body {
 }
    
 .block--coaching {
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     padding: 2.5rem;
+    padding-top: 4rem;
+    align-items: center;
     }
 
-.coaching--text { grid-area: 1 / 1 / 5 / 5; }
-.coaching--bild1 { 
-    grid-area: 1 / 5 / 3 / 8; 
+.coaching--text { 
+    grid-area: 2 / 2 / 4 / 5; }
+
+.coaching--bild1 {
+    grid-area: 2 / 6 / 4 / 10;
     }
-.coaching--bild2 { 
-    grid-area: 1 / 8 / 3 / 10; 
+.coaching--bild2 {
+    grid-area: 2 / 8 / 6 / 10; 
+    width: 100%; 
     }
 
 .coaching--bild3 { 
-    grid-area: 4 / 7 / 6 / 10; 
+    grid-area: 2 / 6 / 4 / 9;
+}
+
+.text2 {
+    grid-area: 4 / 3 / 6 / 7;
+}
+
+.preise {
+    grid-area: 4 / 5 / 6 / 9;
 }
 
 
@@ -278,12 +294,18 @@ body {
 }
 
 .coaching--preise{
-    grid-area: 4/1/6/5;
+    grid-area: 2/2/4/6;
 }
 
-#preis--infotext{
-    grid-area: 4/6/7/10;
-    
+.preis--infotext{
+    grid-area: 4/5/6/10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 5rem;
 }
 
 .block--kontakt{
@@ -297,6 +319,25 @@ body {
 .text_bg {
     background-color: #fff;
 }
+
+.container_preise {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.kontaktformular {
+    margin-top: 3rem;
+    grid-area: 2/3/6/8;
+    width: 100%;
+    height: 100%;
+}
+
+.kontakt-nachricht {
+    grid-area: 1 / 1 / 2 / 10;
+}
+
 
 @media only screen and (max-width: 600px) {
     .page_container {
@@ -454,6 +495,9 @@ body {
         padding-bottom: 1rem;
         padding-left: 0.5rem;    
     }
+
+    .preis--infotext{
+        margin: auto;
+    }
     
-}
 }
