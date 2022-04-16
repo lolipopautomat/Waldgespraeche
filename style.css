@@ -44,7 +44,7 @@ html {
 }
 .home{
     display: flex;
-    background-image: url("/bilder/cover_plain.png");
+    background-image: url("\bilder\cover_plain.png");
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -598,7 +598,7 @@ html {
         transition: all 0.3s ease-in-out;
     }
     .home{
-        background-image: url("/bilder/cover_mobile2.png");
+        background-image: url("\bilder\cover_mobile2.png");
     }
     .Quote_container {
         display: none;
