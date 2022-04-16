@@ -639,6 +639,9 @@ html {
         flex-wrap: wrap;
         align-items: center;
     }
+    .heading2 {
+        margin: 0;
+    }
     .heading3{
         font-size: 15vw;
     }
