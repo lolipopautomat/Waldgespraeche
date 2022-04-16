@@ -12,7 +12,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+   }
 .page_container {
     height: 100vh;
 }
@@ -41,12 +43,33 @@ body {
     min-height: 3rem;
 }
 .home{
-    background-image: url("/bilder/cover_mobile2.png");
+    display: flex;
+    background-image: url("/bilder/cover_plain.png");
     height: 100vh;
     background-size: cover;
     background-position: center;
+    align-items: center;
+    justify-content: left;
 }
-
+.Quote_container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20%;
+    padding-left: 10%;   
+}
+.Quote{
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 4rem;
+    line-height: 0.98;
+    color: #ffffff;
+}
+.Author{
+    text-indent: 2px;
+    padding-top: 15px;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
 .logo{
     left: 0;
     width: 0rem;
@@ -336,7 +359,9 @@ body {
     width: 100%;
     height: 100%;
 }
-
+.block--kontaktipad {
+    display: none;
+}
 .kontakt-nachricht {
     grid-area: 1 / 1 / 2 / 10;
 }
@@ -376,9 +401,152 @@ body {
     }
 }
 
+@media only screen and (max-width: 821px) and (min-width:481px){
+    .page_container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+    }
+    .fwh-slide-body{
+        scroll-snap-align: start;
+    }
+    .home{
+        scroll-snap-align: start;
+    }
+    .Navbar-links li{
+        font-size: 1.8rem;
+    }
+    .Navbar-links li:hover{
+        font-size: 1.8rem;
+    }
+    .navbar{
+        min-height: 5rem;
+    }
+    .logo_home{
+        margin: 0.5rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    .about--picture{
+        grid-area: 1 / 1 / 4 / 6;
+        padding-top: 8rem;
+        width: clamp(124px, 80%, 500px);
+    }
+    .about--header{
+        padding-left: 0rem;
+        grid-area: 2 / 5 / 3 / 9; 
+    }
+    .text{
+        padding-top: 0;
+        font-size: 1.4rem;
+    }
+    .text2{
+        padding-top: 0;
+        font-size: 1.4rem;
+    }
+    .subline{
+        font-size: 1.2rem;
+    }
+    .first-about-text{
+        padding: 0.5rem;
+        grid-area: 3 / 5 / 4 / 10;
+    }
+    .second-about-text{
+        grid-area: 4 / 2 / 6 / 8;
+    }
+    .coaching--text { 
+        grid-area: 2 / 2 / 4 / 8; 
+    }
+    .coaching--bild1 {
+        grid-area: 1 / 6 / 3 / 10;
+        width: 140%;
+    }
+    .text2 {
+        grid-area: 4 / 2 / 6 / 6;
+    }
+    .coaching--bild2 {
+        grid-area: 4 / 7 / 6 / 10; 
+        width: auto;
+    }
+    .block--preise{
+        padding-top: 10rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .block--kontakt {
+        display: none;
+        flex-wrap: wrap;
+    }
+    .heading4{
+        font-size: 6vw;
+        margin: 0.5rem;
+    }
+    .heading1 {
+        font-size: 1.4rem;
+    }
+    .text_bg {
+        background-color: rgb(77, 116, 114);
+    }
+    .container_preise {
+        flex-wrap: wrap;
+    }
+    .preisebg{
+        background-color: aquamarine;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        padding: 0.5rem;
+    }
+    .preisebgo{
+        background-color: aquamarine;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        padding: 0.5rem;
+    }
+    .preise{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .textpreise{
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 1.5rem;
+        color: #93B6B3;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        padding-left: 0.5rem;    
+    }
+    .textpreiseu{
+        font-family: 'Tenor Sans', sans-serif;
+        font-size: 1.25rem;
+        color: #93B6B3;
+        padding-top: 0.3rem;
+        padding-bottom: 1rem;
+        padding-left: 0.5rem;    
+    }
+    .preis--infotext{
+        margin: auto;
+    }
+    .kontaktslideipad{
+        height: 0 !important;
+    }
+    .block--kontakt {
+        display: none;
+    }
+    .block--kontaktipad{
+        display: flex;
+        width: 100%;
+        background-color: #425552;
+    }
+}
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
     .page_container {
         height: 100vh;
     }
@@ -431,6 +599,9 @@ body {
     }
     .home{
         background-image: url("/bilder/cover_mobile2.png");
+    }
+    .Quote_container {
+        display: none;
     }
 
     .fwh-slide-body{
