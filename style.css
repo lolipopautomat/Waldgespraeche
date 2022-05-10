@@ -183,7 +183,6 @@ html {
     padding-left: 0.5rem;
 }
 .heading2{
-    margin: auto;
     font-family: 'Tenor Sans', sans-serif;
     font-size: 4rem;
     line-height: 0.96;
@@ -209,6 +208,11 @@ html {
     color: #93B6B3;
     padding-top: 2rem;
     padding-left: 0.5rem;    
+}
+.text3{
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 1.25rem;
+    color: #93B6B3;
 }
 .subline{
     font-family: 'Tenor Sans', sans-serif;
@@ -322,9 +326,12 @@ html {
 .coaching--preise{
     grid-area: 2/2/4/6;
 }
+.coaching--preise2{
+    grid-area: 4/6/6/9;
+}
 
 .preis--infotext{
-    grid-area: 4/5/6/10;
+    grid-area: 3/2/5/6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,13 +342,25 @@ html {
 }
 
 .block--kontakt{
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
 }
+.kontaktinfocontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    background-color: aquamarine;
+    margin: 10px;
+}
+
 .text_bg {
     background-color: #fff;
 }
@@ -358,12 +377,6 @@ html {
     grid-area: 2/3/6/8;
     width: 100%;
     height: 100%;
-}
-.block--kontaktipad {
-    display: none;
-}
-.kontakt-nachricht {
-    grid-area: 1 / 1 / 2 / 10;
 }
 
 
@@ -398,6 +411,9 @@ html {
     
     .fwh-slide-body{
         height: auto;
+    }
+    .preis--infotext{
+        grid-area: 4/2/6/6;
     }
 }
 
@@ -473,10 +489,6 @@ html {
         display: flex;
         flex-wrap: wrap;
     }
-    .block--kontakt {
-        display: none;
-        flex-wrap: wrap;
-    }
     .heading4{
         font-size: 6vw;
         margin: 0.5rem;
@@ -491,7 +503,7 @@ html {
         flex-wrap: wrap;
     }
     .preisebg{
-        background-color: aquamarine;
+        background-color: #425552;
         width: 100%;
         display: flex;
         align-items: center;
@@ -500,7 +512,7 @@ html {
         padding: 0.5rem;
     }
     .preisebgo{
-        background-color: aquamarine;
+        background-color: #425552;
         width: 100%;
         display: flex;
         align-items: center;
@@ -532,17 +544,6 @@ html {
     }
     .preis--infotext{
         margin: auto;
-    }
-    .kontaktslideipad{
-        height: 0 !important;
-    }
-    .block--kontakt {
-        display: none;
-    }
-    .block--kontaktipad{
-        display: flex;
-        width: 100%;
-        background-color: #425552;
     }
 }
 
@@ -640,7 +641,7 @@ html {
         align-items: center;
     }
     .heading2 {
-        margin: 0;
+        margin: ;
     }
     .heading3{
         font-size: 15vw;
@@ -674,7 +675,7 @@ html {
         flex-wrap: wrap;
     }
     .preisebg{
-        background-color: aquamarine;
+        background-color: #425552;
         width: 100%;
         display: flex;
         align-items: center;
@@ -683,7 +684,7 @@ html {
         padding: 0.5rem;
     }
     .preisebgo{
-        background-color: aquamarine;
+        background-color: #425552;
         width: 100%;
         display: flex;
         align-items: center;
