@@ -38,7 +38,7 @@ header ul li {
 header ul li a {
     text-decoration: none;
     padding: 6px 15px;
-    color: white;
+    color: #2D6A4F;
     border-radius: 20px;
 }
 header ul li a:hover {
@@ -46,7 +46,6 @@ header ul li a:hover {
     color: #425552;
 }
 section{
-    background: linear-gradient(#A7CECB,#425552);
     position: relative;
     width: 100%;
     height: 100vh;
@@ -55,7 +54,8 @@ section{
     justify-content: center;
     align-items: center;
 }
-section img{
+
+.parallax-image{
     position: absolute;
     top:0;
     left: 0;
@@ -63,30 +63,60 @@ section img{
     height: 100vh;
     object-fit: cover;
 }
+
 .quote_div{
     width: 60vw;
+    margin-bottom: 20vh;
 }
+
 #quote{
     position: relative;
-    color: white;
+    color: #2D6A4F;
     font-size: 6.5vh;
 }
+
 #autor{
     position: relative;
-    color: white;
+    color: #2D6A4F;
     white-space: nowrap;
     margin-left: 20px;
-}
-#leaves{
-    height: 120vh;
-    object-position: 0%;
-    top: -200px;
 }
 
 /*-----------------über mich------------------*/
 
 .uebermich{
-    background: #425552;
+    background: white;
+}
+
+#about-me-text-section {
+    margin-top: 10rem;
+    margin-left: 5rem;
+    margin-bottom: 20vh;
+}
+
+#ivana-bild {
+    float: left;
+}
+
+.about-me-header {
+    font-size: 0.9rem;
+    color: #2D6A4F;
+    padding-left: 0.5rem;
+}
+
+#greeting-header {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 4rem;
+    line-height: 0.96;
+    color: #2D6A4F;
+}
+
+.about-me-text {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    color: #2D6A4F;
+    padding-left: 0.5rem;
 }
 
 
