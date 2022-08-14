@@ -8,10 +8,12 @@
     font-family: 'Tenor Sans', sans-serif;
     scroll-behavior: smooth;
 }
+
 body{
     min-height: 100vh;
     overflow-x: hidden;
 }
+
 header{
     position: absolute;
     top: 0;
@@ -82,6 +84,28 @@ section{
     margin-left: 20px;
 }
 
+.arrow-container{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #1B4332;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -moz-animation: bounce 4s infinite linear;
+    -o-animation: bounce 4s infinite linear;
+    -webkit-animation: bounce 4s infinite linear;
+    animation: bounce 4s infinite linear;
+}
+
+.arrow-icon{
+    width: 50px;
+    height: 50px;
+}
+
 /*-----------------über mich------------------*/
 
 .uebermich{
@@ -99,7 +123,7 @@ section{
 }
 
 .about-me-header {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: #2D6A4F;
     padding-left: 0.5rem;
 }
@@ -115,7 +139,7 @@ section{
     position: relative;
     display: block;
     font-size: 1.5rem;
-    color: #2D6A4F;
+    color: black;
     padding-left: 0.5rem;
 }
 

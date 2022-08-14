@@ -1,0 +1,32 @@
+
+@-webkit-keyframes bounce {
+    0% { top: 95%; }
+    50% { top: 97%; }
+    70% { top: 97%; }
+    100% { top: 95%; }
+}
+@-moz-keyframes bounce {
+    0% { top: 95%; }
+    50% { top: 97%; }
+    70% { top: 97%; }
+    100% { top: 95%; }
+}
+@-o-keyframes bounce {
+    0% { top: 95%; }
+    50% { top: 97%; }
+    70% { top: 97%; }
+    100% { top: 95%; }
+}
+@-ms-keyframes bounce {
+    0% { top: 95%; }
+    50% { top: 97%; }
+    70% { top: 97%; }
+    100% { top: 95%; }
+}
+@keyframes bounce {
+    0% { top: 95%; }
+    25% { top: 97%; }
+    50% { top: 95%; }
+    75% { top: 97%; }
+    100% { top: 95%; }
+}
