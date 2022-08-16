@@ -54,6 +54,7 @@ section{
     width: 100vw;
     height: 100vh;
     padding: 5%;
+    padding-top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,12 +123,19 @@ section{
     color: #2D6A4F;
     padding-left: 0.5rem;
 }
+.bodysection{
+    height: auto;
+    justify-content: space-between;
+}
 /*-----------------über mich------------------*/
-
+#uebermich{
+    padding-top: 10%;
+}
 #ivana-bild {
     float: left;
     height: 80%;
-    min-height: 500px;
+    width: 40vw;
+    margin-right: 50px;
 }
 
 #greeting-header {
@@ -140,24 +148,29 @@ section{
 
 
 
-/*-----------------Coaching in der Natur------------------*/
-
+/*-----------------Coaching------------------*/
 .image-container{
-    width: 100%;
+    width: 50vw;
     height: 100%;
     display: flex;
+    overflow: visible;
 }
-
+#coaching-gespräche{
+    width: 50vw;
+}
 #landschaft-ueberlappt{
     position: absolute;
-    margin-left: 15rem;
-    margin-top: 15rem;
+    margin-left: 20rem;
+    margin-top: 17rem;
     min-height: 300px;
+    width: 20vw;
 }
 
 #landschaft-gespraech{
-    border-radius: 50%;
+    margin-top: 2rem;
     min-height: 300px;
+    width: 40vw;
+    border-radius: 300px;
 }
 
 /*------------------Preise und Termine ------------------*/
@@ -189,20 +202,31 @@ section{
     #l1 {
         object-position:calc(50% - 200px) 50%;
     }
-    .section{
+    .bodysection{
         flex-wrap: wrap;
     }
     #about-me-text-section{
         margin-left: 0;
         margin-top: 3rem;
     }
+    #uebermich{
+        justify-content: center;
+    }
     #ivana-bild {
         width: 70vw;
+        height: auto;
+        margin-right: 0;
     }
     .about-me-text{
         font-size: 1.1rem;
     }
     #greeting-header {
         font-size: 2.3rem;
+    }
+    #landschaft-ueberlappt{
+        margin-left: 0;
+    }
+    .text{
+        font-size: 1rem;
     }
 }
