@@ -21,5 +21,4 @@ window.addEventListener('scroll', function(){
     l8.style.top = value * 0.8 + 'px'
     l9.style.top = value * 0.9 + 'px'
     quote.style.marginTop = value * 1.3 + 'px'
-    console.log(value);
 })

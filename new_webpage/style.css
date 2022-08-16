@@ -26,7 +26,7 @@ header{
     z-index: 10000;
 }
 header .logo{
-    width: 100px;
+    width: 150px;
 }
 header ul{
     display: flex;
@@ -42,14 +42,16 @@ header ul li a {
     padding: 6px 15px;
     color: #2D6A4F;
     border-radius: 20px;
+    white-space: nowrap;
 }
 header ul li a:hover {
     background: white;
     color: #425552;
 }
 section{
+    background-color: white;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     padding: 5%;
     display: flex;
@@ -106,42 +108,101 @@ section{
     height: 50px;
 }
 
-/*-----------------über mich------------------*/
-
-.uebermich{
-    background: white;
-}
-
-#about-me-text-section {
-    margin-top: 10rem;
-    margin-left: 5rem;
-    margin-bottom: 20vh;
-}
-
-#ivana-bild {
-    float: left;
-}
-
-.about-me-header {
-    font-size: 1rem;
+.small-header {
+    margin-bottom: 1rem;
+    font-size: 2rem;
     color: #2D6A4F;
     padding-left: 0.5rem;
 }
 
+.text {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    color: #2D6A4F;
+    padding-left: 0.5rem;
+}
+/*-----------------über mich------------------*/
+
+#ivana-bild {
+    float: left;
+    height: 80%;
+    min-height: 500px;
+}
+
 #greeting-header {
+    margin-bottom: 2rem;
     font-family: 'Tenor Sans', sans-serif;
     font-size: 4rem;
     line-height: 0.96;
     color: #2D6A4F;
 }
 
-.about-me-text {
-    position: relative;
-    display: block;
-    font-size: 1.5rem;
-    color: black;
-    padding-left: 0.5rem;
+
+
+/*-----------------Coaching in der Natur------------------*/
+
+.image-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#landschaft-ueberlappt{
+    position: absolute;
+    margin-left: 15rem;
+    margin-top: 15rem;
+    min-height: 300px;
+}
+
+#landschaft-gespraech{
+    border-radius: 50%;
+    min-height: 300px;
+}
+
+/*------------------Preise und Termine ------------------*/
+
+#bank-bild{
+    height: 40%;
+    min-height: 250px;
+    margin-left: 25rem;
+}
+
+.preis-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 
 
+/*-----------------Responsiv------------------*/
+@media screen and (max-width: 450px) {
+    #quote {
+        font-size: 4vh;
+    }
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #l1 {
+        object-position:calc(50% - 200px) 50%;
+    }
+    .section{
+        flex-wrap: wrap;
+    }
+    #about-me-text-section{
+        margin-left: 0;
+        margin-top: 3rem;
+    }
+    #ivana-bild {
+        width: 70vw;
+    }
+    .about-me-text{
+        font-size: 1.1rem;
+    }
+    #greeting-header {
+        font-size: 2.3rem;
+    }
+}
