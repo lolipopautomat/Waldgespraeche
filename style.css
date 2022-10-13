@@ -1,722 +1,309 @@
-:root{
-    font-size: clamp(12px, 1vw, 16px);
-}
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+*
+/*-----------------Landing Page------------------*/
+{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-html {
+    font-family: 'Tenor Sans', sans-serif;
     scroll-behavior: smooth;
-   }
-.page_container {
-    height: 100vh;
 }
 
-::-webkit-scrollbar {
-    display: none;
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-.navbar.start{
+header{
     position: absolute;
-    display: flex;
-    width: 100%;
-    bottom: 0;
-    top: none;
-    background-color: transparent;
-}
-.navbar{
-    display: flex;
-    position: fixed;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: #A7CECB;
-    color: white;
-    min-height: 3rem;
-}
-.home{
-    display: flex;
-    background-image: url("./bilder/cover_plain.png");
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    justify-content: left;
-}
-.Quote_container {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 20%;
-    padding-left: 10%;   
-}
-.Quote{
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 4rem;
-    line-height: 0.98;
-    color: #ffffff;
-}
-.Author{
-    text-indent: 2px;
-    padding-top: 15px;
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 1.5rem;
-    color: #ffffff;
-}
-.logo{
-    left: 0;
-    width: 0rem;
-    height: 2rem;
-    margin: .5rem;
-    opacity: 0;
-}
-.logo_home{
-    position: fixed;
-    margin: .5rem;
-    width: 2rem;
-    height: 2rem;
     top: 0;
     left: 0;
-    display: flex;
-    transition: all 0.3s ease-in-out;
-}
-.Navbar-links{
-    transition: all .5s ease-in;
-}
-.Navbar-links.start{
-    transition: none .5s ease-in;
-}
-.Navbar-links ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-.Navbar-links li{
-    list-style: none;
-    font-size: 1.2rem;
-    transition: all .3s ease-in-out;
-}
-.Navbar-links a{
-    font-family: 'Tenor Sans', sans-serif;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-    display: block;
-}
-.Navbar-links li:hover{
-    font-size: 1.1rem;
-    transition: all .3s ease-in-out;
-}
-.toggle {
-    position: fixed;
-    right: 1rem;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    cursor: pointer;
-    height: 3rem;
-    transition: all .5s ease-in-out;
-}
-.Burger {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 3px;
-    background: transparent;
-    border-radius: 2px;
-    transition: all .5s ease-in-out;
-}
-.Burger::before,
-.Burger::after{
-    content: "";
-    position: absolute;
     width: 100%;
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-    transition: all .5s ease-in-out;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
 }
-.Burger::before{
-    transform: translateY(-6px);
+header .logo{
+    width: 150px;
 }
-.Burger::after{
-    transform: translateY(6px);
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
-.toggle.open .Burger {
-    transform: translateX(-50px);
-    background: transparent;
+header ul li {
+    list-style: none;
+    margin: 10px;
 }
-.toggle.open .Burger::before{
-    transform: rotate(45deg) translate(35px,-35px);
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #2D6A4F;
+    border-radius: 20px;
+    white-space: nowrap;
 }
-.toggle.open .Burger::after{
-    transform: rotate(-45deg) translate(35px,35px);
+header ul li a:hover {
+    background: white;
+    color: #425552;
+}
+section{
+    background-color: white;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 5%;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.fwh-slide{
+.parallax-image{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    background: white;
-    box-sizing: border-box;
+    object-fit: cover;
 }
-.fwh-slide-body{
-    height: 100vh;
-    background: white;
-    box-sizing: border-box;
+
+.quote_div{
+    width: 60vw;
+    margin-bottom: 20vh;
 }
-.fwh-slide--bg-grey{
-    background: #425552;
+
+#quote{
+    position: relative;
+    color: #2D6A4F;
+    font-size: 6.5vh;
 }
-.heading1{
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 0.9rem;
-    color: #93B6B3;
+
+#autor{
+    position: relative;
+    color: #2D6A4F;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.arrow-container{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #1B4332;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -moz-animation: bounce 4s infinite linear;
+    -o-animation: bounce 4s infinite linear;
+    -webkit-animation: bounce 4s infinite linear;
+    animation: bounce 4s infinite linear;
+}
+
+.arrow-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.small-header {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #2D6A4F;
     padding-left: 0.5rem;
 }
-.heading2{
+
+.text {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    color: #2D6A4F;
+    padding-left: 0.5rem;
+}
+.bodysection{
+    height: auto;
+    justify-content: space-between;
+}
+/*-----------------über mich------------------*/
+#uebermich{
+    padding-top: 5%;
+}
+#ivana-bild {
+    float: left;
+    height: 80%;
+    width: 40vw;
+    margin-right: 50px;
+}
+
+#greeting-header {
+    margin-bottom: 2rem;
     font-family: 'Tenor Sans', sans-serif;
     font-size: 4rem;
     line-height: 0.96;
-    color: #A7CECB;
-    grid-area: 2 / 1 / 2 / 1;
+    color: #2D6A4F;
 }
 
-.heading3{
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 5rem;
-    line-height: 0.96;
-    color: #A7CECB;
-}
-.heading4{
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 5rem;
-    line-height: 0.96;
-    color: #A7CECB;
-}
-.text{
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 1.25rem;
-    color: #93B6B3;
-    padding-top: 2rem;
-    padding-left: 0.5rem;    
-}
-.text3{
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 1.25rem;
-    color: #93B6B3;
-}
-.subline{
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 0.9rem;
-    color: #93B6B3;
-    padding-left: 0.5rem;
-    padding-top: 3rem;
-    padding-bottom: 0.8rem;
-}
 
-.text2{
-    grid-area: 2 / 1 / 2 / 8;
-    font-family: 'Tenor Sans', sans-serif;
-    font-size: 1.25rem;
-    color: #93B6B3;
-    padding-top: 0rem;
-    padding-left: 0.5rem;
-    
-}
 
-.block--about{
+/*-----------------Coaching------------------*/
+.image-container{
+    width: 50vw;
     height: 100%;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: max(3%, 1.5rem);
-    grid-row-gap: max(3%, 1.5rem);
-    padding: clamp(1rem, 1vw, 4rem);
-    padding: 2.5rem;
-    align-items: center;
-    }
-
-.about--picture { 
     display: flex;
-    align-content: center;
-    grid-area: 2 / 2 / 6 / 5;
-    width: clamp(124px, 100%, 500px);
+    overflow: visible;
 }
-    
-.about--header { 
-    grid-area: 2 / 5 / 3 / 9; 
+#coaching-gespräche{
+    width: 50vw;
+}
+#coaching-text{
+    margin-right: 5rem;
+}
+#landschaft-ueberlappt{
+    position: absolute;
+    margin-left: 25vw;
+    margin-top: 30vh;
+    max-width: 220px;
+    width: 20vw;
+}
+
+#landschaft-gespraech{
+    margin-top: 2rem;
+    min-height: 300px;
+    max-height: 600px;
+    width: 40vw;
+    border-radius: 300px;
+}
+
+/*------------------Preise und Termine ------------------*/
+#preise {
+    flex-wrap: wrap;
+}
+#Preisschild {
+    margin-top: 1rem;
+    width: 70vw;
+    margin-left: 10vw;
+}
+.Preise-Hintergrund{
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    background-color: #69b9926e;
+    border-radius: 1rem;
+}
+#bank-bild{
+    height: 40%;
+    min-height: 250px;
+    margin-left: 5vw;
+    width: 80vw;
+}
+
+.preis-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
-.first-about-text{
-    grid-area: 3 / 5 / 4 / 9;
-}
 
-.second-about-text{
-    grid-area: 4 / 5 / 6 / 9;
-}
-   
-.block--coaching {
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    padding: 2.5rem;
-    padding-top: 4rem;
-    align-items: center;
+
+/*-----------------Responsiv------------------*/
+@media screen and (max-width: 480px) {
+    #quote {
+        font-size: 4vh;
     }
-
-.coaching--text { 
-    grid-area: 2 / 2 / 4 / 5; }
-
-.coaching--bild1 {
-    grid-area: 2 / 6 / 4 / 10;
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
     }
-.coaching--bild2 {
-    grid-area: 2 / 8 / 6 / 10; 
-    width: 100%; 
+    #l1 {
+        object-position:calc(50% - 200px) 50%;
     }
-
-.coaching--bild3 { 
-    grid-area: 2 / 6 / 4 / 9;
-}
-
-.text2 {
-    grid-area: 4 / 3 / 6 / 7;
-}
-
-.preise {
-    grid-area: 4 / 5 / 6 / 9;
-}
-
-
-.vertical-stack{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    grid-area: 4 / 7 / 6 / 10; 
-}
-
-.horizontal-stack{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.block--preise{
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: max(3%, 1.5rem);
-    grid-row-gap: max(3%, 1.5rem);
-    padding: 4rem;
-}
-
-.coaching--preise{
-    grid-area: 2/2/4/6;
-}
-.coaching--preise2{
-    grid-area: 4/6/6/9;
-}
-
-.preis--infotext{
-    grid-area: 3/2/5/6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-bottom: 5rem;
-}
-
-.block--kontakt{
-    display: flex;
-    flex-direction: column;
-    margin-left: 40px;
-    padding-top: 10rem;
-    padding-bottom: 5rem;
-}
-.kontaktinfocontent{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 5px;
-}
-.icon {
-    width: 40px;
-    height: 40px;
-    background-color: aquamarine;
-    margin: 10px;
-}
-
-.text_bg {
-    background-color: #fff;
-}
-
-.container_preise {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.kontaktformular {
-    margin-top: 3rem;
-    grid-area: 2/3/6/8;
-    width: 100%;
-    height: 100%;
-}
-
-
-@media only screen and (max-height: 800px){
-    .coaching--text{
-        grid-area: 1 / 2 / 4 / 6;
-        padding-top: 2rem ; 
+    .bodysection{
+        flex-wrap: wrap;
     }
-    .text2 {
-        grid-area: 4 / 3 / 6 / 8;
+    #about-me-text-section{
+        margin-left: 0;
+        margin-top: 3rem;
     }
-    .first-about-text{
-        grid-area: 2 / 5 / 3 / 10;
+    #uebermich{
+        justify-content: center;
     }
-    .about--header { 
-        grid-area: 1 / 5 / 2 / 9; 
-        padding-top: 1.5rem;
-    }
-    .second-about-text{
-        grid-area: 3 / 5 / 5 / 10;
-    }
-    .about--picture { 
-        display: flex;
-        align-content: center;
-        grid-area: 1 / 2 / 5 / 5;
-        width: clamp(124px, 100%, 500px);
-    }
-    .block--about{
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        }
-    
-    .fwh-slide-body{
+    #ivana-bild {
+        width: 70vw;
         height: auto;
+        margin-right: 0;
     }
-    .preis--infotext{
-        grid-area: 4/2/6/6;
+    .about-me-text{
+        font-size: 1.1rem;
     }
-}
-
-@media only screen and (max-width: 821px) and (min-width:481px){
-    .page_container {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-        height: 100vh;
+    #greeting-header {
+        font-size: 2.3rem;
     }
-    .fwh-slide-body{
-        scroll-snap-align: start;
+/*-----------------Coaching------------------*/
+    #landschaft-ueberlappt{
+        display: none;
     }
-    .home{
-        scroll-snap-align: start;
-    }
-    .Navbar-links li{
-        font-size: 1.8rem;
-    }
-    .Navbar-links li:hover{
-        font-size: 1.8rem;
-    }
-    .navbar{
-        min-height: 5rem;
-    }
-    .logo_home{
-        margin: 0.5rem;
-        width: 4rem;
-        height: 4rem;
-    }
-    .about--picture{
-        grid-area: 1 / 1 / 4 / 6;
-        padding-top: 8rem;
-        width: clamp(124px, 80%, 500px);
-    }
-    .about--header{
-        padding-left: 0rem;
-        grid-area: 2 / 5 / 3 / 9; 
+    #coaching-gespräche {
+        width: 100vw;
     }
     .text{
-        padding-top: 0;
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
-    .text2{
-        padding-top: 0;
-        font-size: 1.4rem;
+    #coaching-text{
+        margin-right: 0rem;
     }
-    .subline{
-        font-size: 1.2rem;
+    #landschaft-gespraech{
+        width: 90vw;
     }
-    .first-about-text{
-        padding: 0.5rem;
-        grid-area: 3 / 5 / 4 / 10;
-    }
-    .second-about-text{
-        grid-area: 4 / 2 / 6 / 8;
-    }
-    .coaching--text { 
-        grid-area: 2 / 2 / 4 / 8; 
-    }
-    .coaching--bild1 {
-        grid-area: 1 / 6 / 3 / 10;
-        width: 140%;
-    }
-    .text2 {
-        grid-area: 4 / 2 / 6 / 6;
-    }
-    .coaching--bild2 {
-        grid-area: 4 / 7 / 6 / 10; 
-        width: auto;
-    }
-    .block--preise{
-        padding-top: 10rem;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .heading4{
-        font-size: 6vw;
-        margin: 0.5rem;
-    }
-    .heading1 {
-        font-size: 1.4rem;
-    }
-    .text_bg {
-        background-color: rgb(77, 116, 114);
-    }
-    .container_preise {
-        flex-wrap: wrap;
-    }
-    .preisebg{
-        background-color: #425552;
-        width: 100%;
-        display: flex;
-        align-items: center;
+    .preis-block{
+        flex-direction: column;
         justify-content: center;
-        border-radius: 20px;
-        padding: 0.5rem;
-    }
-    .preisebgo{
-        background-color: #425552;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 30px;
-        padding: 0.5rem;
-    }
-    .preise{
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    .textpreise{
-        font-family: 'Tenor Sans', sans-serif;
-        font-size: 1.5rem;
-        color: #93B6B3;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
-        padding-left: 0.5rem;    
-    }
-    .textpreiseu{
-        font-family: 'Tenor Sans', sans-serif;
-        font-size: 1.25rem;
-        color: #93B6B3;
-        padding-top: 0.3rem;
-        padding-bottom: 1rem;
-        padding-left: 0.5rem;    
-    }
-    .preis--infotext{
-        margin: auto;
     }
 }
-
-@media only screen and (max-width: 480px) {
-    .page_container {
-        height: 100vh;
+@media screen and (max-width: 800px) and (min-width:481px) {
+    /*-----------------über mich------------------*/
+    #uebermich {
+        padding-top: 10rem;
     }
-    
-    .toggle {
-        display: flex;
+    #ivana-bild {
+        align-self: flex-end;
     }
-    .Navbar-links {
-        height: 0;
-        overflow: hidden;
-        width: 100%;
+    #übermich {
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
     }
-    .navbar{
+    #greeting-header {
+        position: absolute;
+        top: 4.5rem;
+        left: 5rem;
+    }
+    #landschaft-ueberlappt{
+        display: none;
+    }
+    #coaching-gespräche {
+        width: 100vw;
+    }
+    .text{
+        font-size: 1rem;
+    }
+    #coaching-text{
+        margin-right: 0rem;
+    }
+    #landschaft-gespraech{
+        width: 42vw;
+    }
+    /*-----------------Termine------------------*/    
+    .preis-block{
         flex-direction: column;
-        align-items: center;
-    }
-    .Navbar-links ul{
-      width: 100%;
-      flex-direction: column;
-      justify-content: space-between;
-
-    }
-    .Navbar-links li {
-        display: flex;
-        text-align: center;
-        height: 150px;
-        align-items:center ;
         justify-content: center;
     }
-    .first {
-        margin-top: 25%;
-    }
-    .Navbar-links li a {
-        font-size: 2rem;
-        padding-top: 56px; 
-        width: 100%;
-        height: 100%;
-    }
-    .Navbar-links.active {
-        height: 100vh;
-        background-color: #A7CECB;
-        transition: all 0.3s ease-in-out;
-    }
-    .Navbar-links li:hover{
-        background-color: transparent;
-    }
-    .logo_home.start{
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-    }
-    .home{
-        background-image: url("./bilder/cover_mobile2.png");
-    }
-    .Quote_container {
-        display: none;
+    .Preise-Hintergrund{
+        margin: 0.5rem;
     }
 
-    .fwh-slide-body{
-        height: auto;
-    }
-    .block--about{
-        display: flex;
-        flex-wrap: wrap;
 
-    }
-    .text {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-    .text2 {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-    .about--text { 
-        display: flex;
-        order: 1;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .about--picture {
-        order: 2;
-        display: flex;
-    }
-    .block--coaching {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .coaching--text {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    .heading2 {
-        margin: 0px;
-    }
-    .heading3{
-        font-size: 15vw;
-    }
-    .coaching--bild1 { 
-        display: flex; 
-        margin-top: 2rem;
-        }
-    .coaching--bild2 { 
-        display: none;
-        }
-    
-    .coaching--bild3 { 
-        display: flex; 
-    }
-    .block--preise{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .block--kontakt {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .heading4{
-        font-size: 6vw;
-    }
-    .text_bg {
-        background-color: rgb(77, 116, 114);
-    }
-    .container_preise {
-        flex-wrap: wrap;
-    }
-    .preisebg{
-        background-color: #425552;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;
-        padding: 0.5rem;
-    }
-    .preisebgo{
-        background-color: #425552;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 30px;
-        padding: 0.5rem;
-    }
-    .preise{
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-    }
-    .textpreise{
-        font-family: 'Tenor Sans', sans-serif;
-        font-size: 1.25rem;
-        color: #93B6B3;
-        padding-top: 0.3rem;
-        padding-bottom: 0.3rem;
-        padding-left: 0.5rem;    
-    }
-    .textpreiseu{
-        font-family: 'Tenor Sans', sans-serif;
-        font-size: 1.25rem;
-        color: #93B6B3;
-        padding-top: 0.3rem;
-        padding-bottom: 1rem;
-        padding-left: 0.5rem;    
-    }
-
-    .preis--infotext{
-        margin: auto;
-    }
-    
 }

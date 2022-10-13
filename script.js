@@ -1,46 +1,24 @@
-const toggleButton = document.getElementsByClassName("toggle")[0];
-const navbarLinks = document.getElementsByClassName("Navbar-links")[0];
-const Brandname = document.getElementsByClassName("Brandname")[0];
-const logo = document.getElementsByClassName("logo_home")[0];
-const toggle = document.getElementsByClassName("toggle")[0];
+let l1 = document.getElementById('l1');
+let l2 = document.getElementById('l2');
+let l3 = document.getElementById('l3');
+let l4 = document.getElementById('l4');
+let l5 = document.getElementById('l5');
+let l6 = document.getElementById('l6');
+let l7 = document.getElementById('l7');
+let l8 = document.getElementById('l8');
+let l9 = document.getElementById('l9');
+let quote = document.getElementById('quotediv');
 
-const nav = document.querySelector("nav");
-const sectionOne = document.getElementsByClassName("home")[0];
-
-const sectionOneOptions = {
-    rootMargin:"-60px 0px 0px 0px"
-};
-
-const sectionOneObserver = new IntersectionObserver(function (
-  entries,
-  sectionOneObserver
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      nav.classList.remove("start");
-      //Brandname.classList.remove("start");//
-      logo.classList.remove("start");
-      toggle.classList.remove("start");
-      navbarLinks.classList.remove("start");
-    } else {
-      nav.classList.add("start");
-      logo.classList.add("start");
-      //Brandname.classList.add("start");//
-      toggle.classList.add("start");
-      navbarLinks.classList.add("start");
-    }
-  });
-},
-sectionOneOptions);
-
-sectionOneObserver.observe(sectionOne);
-
-let menuOpen = false;
-
-function toggleNavbar(){
-    if (window.innerWidth<600){
-      toggleButton.classList.toggle("open");
-      navbarLinks.classList.toggle("active");
-    }
-}
-toggleButton.addEventListener("click", () => toggleNavbar());
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    l1.style.top = value * 0.1 + 'px';
+    l2.style.top = value * 0.2 + 'px'
+    l3.style.top = value * 0.3 + 'px'
+    l4.style.top = value * 0.4 + 'px'
+    l5.style.top = value * 0.5 + 'px'
+    l6.style.top = value * 0.6 + 'px'
+    l7.style.top = value * 0.7 + 'px'
+    l8.style.top = value * 0.8 + 'px'
+    l9.style.top = value * 0.9 + 'px'
+    quote.style.marginTop = value * 1.3 + 'px'
+})
