@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+*
+/*-----------------Landing Page------------------*/
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tenor Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo{
+    width: 150px;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+header ul li {
+    list-style: none;
+    margin: 10px;
+}
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #2D6A4F;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+header ul li a:hover {
+    background: white;
+    color: #425552;
+}
+section{
+    background-color: white;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 5%;
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-image{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.quote_div{
+    width: 60vw;
+    margin-bottom: 20vh;
+}
+
+#quote{
+    position: relative;
+    color: #2D6A4F;
+    font-size: 6.5vh;
+}
+
+#autor{
+    position: relative;
+    color: #2D6A4F;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+.arrow-container{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #1B4332;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -moz-animation: bounce 4s infinite linear;
+    -o-animation: bounce 4s infinite linear;
+    -webkit-animation: bounce 4s infinite linear;
+    animation: bounce 4s infinite linear;
+}
+
+.arrow-icon{
+    width: 50px;
+    height: 50px;
+}
+
+.small-header {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #2D6A4F;
+    padding-left: 0.5rem;
+}
+
+.text {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    color: #2D6A4F;
+    padding-left: 0.5rem;
+}
+.bodysection{
+    height: auto;
+    justify-content: space-between;
+}
+/*-----------------über mich------------------*/
+#uebermich{
+    padding-top: 5%;
+}
+#ivana-bild {
+    float: left;
+    height: 80%;
+    width: 40vw;
+    margin-right: 50px;
+}
+
+#greeting-header {
+    margin-bottom: 2rem;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 4rem;
+    line-height: 0.96;
+    color: #2D6A4F;
+}
+
+
+
+/*-----------------Coaching------------------*/
+.image-container{
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    overflow: visible;
+}
+#coaching-gespräche{
+    width: 50vw;
+}
+#coaching-text{
+    margin-right: 5rem;
+}
+#landschaft-ueberlappt{
+    position: absolute;
+    margin-left: 25vw;
+    margin-top: 30vh;
+    max-width: 220px;
+    width: 20vw;
+}
+
+#landschaft-gespraech{
+    margin-top: 2rem;
+    min-height: 300px;
+    max-height: 600px;
+    width: 40vw;
+    border-radius: 300px;
+}
+
+/*------------------Preise und Termine ------------------*/
+#preise {
+    flex-wrap: wrap;
+}
+#Preisschild {
+    margin-top: 1rem;
+    width: 70vw;
+    margin-left: 10vw;
+}
+.Preise-Hintergrund{
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    background-color: #69b9926e;
+    border-radius: 1rem;
+}
+#bank-bild{
+    height: 40%;
+    min-height: 250px;
+    margin-left: 5vw;
+    width: 80vw;
+}
+
+.preis-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+
+/*-----------------Responsiv------------------*/
+@media screen and (max-width: 480px) {
+    #quote {
+        font-size: 4vh;
+    }
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #l1 {
+        object-position:calc(50% - 200px) 50%;
+    }
+    .bodysection{
+        flex-wrap: wrap;
+    }
+    #about-me-text-section{
+        margin-left: 0;
+        margin-top: 3rem;
+    }
+    #uebermich{
+        justify-content: center;
+    }
+    #ivana-bild {
+        width: 70vw;
+        height: auto;
+        margin-right: 0;
+    }
+    .about-me-text{
+        font-size: 1.1rem;
+    }
+    #greeting-header {
+        font-size: 2.3rem;
+    }
+/*-----------------Coaching------------------*/
+    #landschaft-ueberlappt{
+        display: none;
+    }
+    #coaching-gespräche {
+        width: 100vw;
+    }
+    .text{
+        font-size: 1rem;
+    }
+    #coaching-text{
+        margin-right: 0rem;
+    }
+    #landschaft-gespraech{
+        width: 90vw;
+    }
+    .preis-block{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 800px) and (min-width:481px) {
+    /*-----------------über mich------------------*/
+    #uebermich {
+        padding-top: 10rem;
+    }
+    #ivana-bild {
+        align-self: flex-end;
+    }
+    #übermich {
+        position: absolute;
+        top: 2rem;
+        left: 5rem;
+    }
+    #greeting-header {
+        position: absolute;
+        top: 4.5rem;
+        left: 5rem;
+    }
+    #landschaft-ueberlappt{
+        display: none;
+    }
+    #coaching-gespräche {
+        width: 100vw;
+    }
+    .text{
+        font-size: 1rem;
+    }
+    #coaching-text{
+        margin-right: 0rem;
+    }
+    #landschaft-gespraech{
+        width: 42vw;
+    }
+    /*-----------------Termine------------------*/    
+    .preis-block{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .Preise-Hintergrund{
+        margin: 0.5rem;
+    }
+
+
+}
