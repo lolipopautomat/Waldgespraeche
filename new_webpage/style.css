@@ -126,6 +126,7 @@ section{
 .bodysection{
     height: auto;
     justify-content: space-between;
+    display: flex;
 }
 /*-----------------über mich------------------*/
 #uebermich{
@@ -136,6 +137,9 @@ section{
     height: 80%;
     width: 40vw;
     margin-right: 50px;
+    object-fit: contain;
+    border-radius: 10px;
+    opacity: 90%;
 }
 
 #greeting-header {
@@ -162,11 +166,12 @@ section{
     margin-right: 5rem;
 }
 #landschaft-ueberlappt{
+    display:none;
     position: absolute;
     margin-left: 25vw;
     margin-top: 30vh;
-    max-width: 220px;
-    width: 20vw;
+    max-width: 300px;
+    width: 30vw;
 }
 
 #landschaft-gespraech{
@@ -174,7 +179,8 @@ section{
     min-height: 300px;
     max-height: 600px;
     width: 40vw;
-    border-radius: 300px;
+    border-radius: 10px;
+    opacity: 90%;
 }
 
 /*------------------Preise und Termine ------------------*/
@@ -194,10 +200,12 @@ section{
     border-radius: 1rem;
 }
 #bank-bild{
+    object-fit: cover;
     height: 40%;
     min-height: 250px;
-    margin-left: 5vw;
-    width: 80vw;
+    margin-left: -5vw;
+    width: 120vw;
+    opacity: 90%;
 }
 
 .preis-block{
@@ -232,9 +240,15 @@ section{
         justify-content: center;
     }
     #ivana-bild {
+        display: flex;
+        float:none;
         width: 70vw;
         height: auto;
         margin-right: 0;
+    }
+    .picture_div{
+        display:flex ;
+        justify-content: center;
     }
     .about-me-text{
         font-size: 1.1rem;
