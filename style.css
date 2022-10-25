@@ -21,33 +21,66 @@ header{
     width: 100%;
     padding: 30px 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     z-index: 10000;
 }
-header .logo{
-    width: 150px;
+
+.logo{
+    position: sticky;
+    width: 125px;
+    top: 0;
+    z-index: 2;
+    margin-left: 1rem;
+    top: 20px;
+    height: 0;
 }
+
 header ul{
     display: flex;
     justify-content: center;
     align-items: center;  
 }
+
 header ul li {
     list-style: none;
     margin: 10px;
 }
+
 header ul li a {
     text-decoration: none;
     padding: 6px 15px;
-    color: #2D6A4F;
+    color: #ffffff;
     border-radius: 20px;
+    font-size: 1.2rem;
     white-space: nowrap;
 }
+
 header ul li a:hover {
     background: white;
     color: #425552;
 }
+
+.arrow-container{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    -moz-animation: bounce 6s infinite linear;
+    -o-animation: bounce 6s infinite linear;
+    -webkit-animation: bounce 6s infinite linear;
+    animation: bounce 6s infinite linear;
+}
+
+.arrow-icon{
+    width: 50px;
+    height: 50px;
+}
+
 section{
     background-color: white;
     position: relative;
@@ -60,7 +93,7 @@ section{
     align-items: center;
 }
 
-.parallax-image{
+.headerimage{
     position: absolute;
     top:0;
     left: 0;
@@ -85,28 +118,6 @@ section{
     color: #2D6A4F;
     white-space: nowrap;
     margin-left: 20px;
-}
-
-.arrow-container{
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: #1B4332;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    -moz-animation: bounce 4s infinite linear;
-    -o-animation: bounce 4s infinite linear;
-    -webkit-animation: bounce 4s infinite linear;
-    animation: bounce 4s infinite linear;
-}
-
-.arrow-icon{
-    width: 50px;
-    height: 50px;
 }
 
 .small-header {
@@ -134,8 +145,7 @@ section{
 }
 #ivana-bild {
     float: left;
-    height: 80%;
-    width: 40vw;
+    width: 35vw;
     margin-right: 50px;
     object-fit: contain;
     border-radius: 10px;
@@ -159,26 +169,17 @@ section{
     display: flex;
     overflow: visible;
 }
-#coaching-gespräche{
-    width: 50vw;
-}
+
 #coaching-text{
     margin-right: 5rem;
 }
-#landschaft-ueberlappt{
-    display:none;
-    position: absolute;
-    margin-left: 25vw;
-    margin-top: 30vh;
-    max-width: 300px;
-    width: 30vw;
-}
 
 #landschaft-gespraech{
-    margin-top: 2rem;
+    margin-top: 5rem;
+    margin-left: 10rem;
     min-height: 300px;
     max-height: 600px;
-    width: 40vw;
+    width: 30vw;
     border-radius: 10px;
     opacity: 90%;
 }
@@ -199,12 +200,18 @@ section{
     background-color: #69b9926e;
     border-radius: 1rem;
 }
+
+.bank-image-container{
+    width: 100%;
+}
+
 #bank-bild{
-    object-fit: cover;
-    height: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     min-height: 250px;
-    margin-left: -5vw;
-    width: 120vw;
+    width: 35vw;
+    border-radius: 10px;
     opacity: 90%;
 }
 
@@ -213,6 +220,12 @@ section{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+}
+
+.misc-container{
+    cursor: pointer;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 
@@ -295,10 +308,8 @@ section{
         top: 4.5rem;
         left: 5rem;
     }
-    #landschaft-ueberlappt{
-        display: none;
-    }
-    #coaching-gespräche {
+
+    #landschaft-gespraech {
         width: 100vw;
     }
     .text{
