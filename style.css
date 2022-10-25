@@ -93,29 +93,35 @@ section{
     align-items: center;
 }
 
-.headerimage{
+.headerdiv{
     position: absolute;
     top:0;
     left: 0;
     width: 100%;
     height: 100vh;
-    object-fit: cover;
 }
-
+.headerimage{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    content:url("/images/cover_desktop2.png");
+}
 .quote_div{
+    align-self: flex-end;
     width: 60vw;
-    margin-bottom: 20vh;
+    margin-bottom: 5vh;
+    z-index: 5000;
 }
 
 #quote{
     position: relative;
-    color: #2D6A4F;
+    color: white;
     font-size: 6.5vh;
 }
 
 #autor{
     position: relative;
-    color: #2D6A4F;
+    color: white;
     white-space: nowrap;
     margin-left: 20px;
 }
@@ -147,6 +153,7 @@ section{
     float: left;
     width: 35vw;
     margin-right: 50px;
+    margin-bottom: 2rem;
     object-fit: contain;
     border-radius: 10px;
     opacity: 90%;
@@ -167,17 +174,21 @@ section{
     width: 50vw;
     height: 100%;
     display: flex;
-    overflow: visible;
+    overflow: hidden;
+    justify-content: center;
 }
 
 #coaching-text{
     margin-right: 5rem;
 }
+#coaching-gespräche{
+    width:50vw;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
 
 #landschaft-gespraech{
-    margin-top: 5rem;
     margin-left: 10rem;
-    min-height: 300px;
     max-height: 600px;
     width: 30vw;
     border-radius: 10px;
@@ -202,16 +213,16 @@ section{
 }
 
 .bank-image-container{
-    width: 100%;
+    width: 100vw;
+    margin-left: -5vw;
 }
 
 #bank-bild{
-    display: block;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
     min-height: 250px;
-    width: 35vw;
-    border-radius: 10px;
+    width: 100vw;
     opacity: 90%;
 }
 
@@ -227,13 +238,27 @@ section{
     margin-left: 5rem;
     margin-right: 5rem;
 }
-
-
+#Kontakt{
+    margin-top: -5px;
+    padding-top: 3vh;
+    flex-direction: column;
+    height: auto;
+    background-color:#69b9926e;
+}
 
 /*-----------------Responsiv------------------*/
 @media screen and (max-width: 480px) {
+    .logo{
+        display: none;
+    }
+    .headerimage{
+        content:url("/images/cover_mobile2.png");
+    }
+    .quote_div{
+        margin-bottom: 8vh;
+    }
     #quote {
-        font-size: 4vh;
+        font-size: 3vh;
     }
     header {
         flex-wrap: wrap;
@@ -282,16 +307,29 @@ section{
     #coaching-text{
         margin-right: 0rem;
     }
+    .image-container{
+        width: 100vw;
+    }
     #landschaft-gespraech{
         width: 90vw;
+        margin-left: 0vw;
     }
     .preis-block{
         flex-direction: column;
         justify-content: center;
     }
 }
-@media screen and (max-width: 800px) and (min-width:481px) {
+@media screen and (max-width: 820px) and (min-width:481px) {
     /*-----------------über mich------------------*/
+    #header-start{
+        justify-content: center;
+    }
+    .logo{
+       display: none;
+    }
+    #quote {
+        font-size: 4vh;
+    }
     #uebermich {
         padding-top: 10rem;
     }
