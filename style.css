@@ -104,7 +104,7 @@ section{
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    content:url("/images/cover_desktop2.png");
+    content:url("./images/cover_desktop2.png");
 }
 .quote_div{
     align-self: flex-end;
@@ -252,7 +252,7 @@ section{
         display: none;
     }
     .headerimage{
-        content:url("/images/cover_mobile2.png");
+        content:url("./images/cover_mobile2.png");
     }
     .quote_div{
         margin-bottom: 8vh;
