@@ -107,16 +107,17 @@ section{
     content:url("./images/cover_desktop2.png");
 }
 .quote_div{
+    margin-left: 23vw;
     align-self: flex-end;
     width: 60vw;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
     z-index: 5000;
 }
 
 #quote{
     position: relative;
     color: white;
-    font-size: 6.5vh;
+    font-size: 4.5vh;
 }
 
 #autor{
@@ -255,7 +256,7 @@ section{
         content:url("./images/cover_mobile2.png");
     }
     .quote_div{
-        margin-bottom: 8vh;
+        display: none;
     }
     #quote {
         font-size: 3vh;
