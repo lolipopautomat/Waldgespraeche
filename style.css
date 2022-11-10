@@ -157,7 +157,7 @@ section{
     margin-bottom: 2rem;
     object-fit: contain;
     border-radius: 10px;
-    opacity: 90%;
+    opacity: 100%;
 }
 
 #greeting-header {
@@ -193,7 +193,7 @@ section{
     max-height: 600px;
     width: 30vw;
     border-radius: 10px;
-    opacity: 90%;
+    opacity: 100%;
 }
 
 /*------------------Preise und Termine ------------------*/
@@ -224,7 +224,7 @@ section{
     margin-right: auto;
     min-height: 250px;
     width: 100vw;
-    opacity: 90%;
+    opacity: 100%;
 }
 
 .preis-block{
